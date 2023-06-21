@@ -41,6 +41,8 @@ function higherx2(two,val){
   console.log(name.push('ammu')) //to insert at end
   console.log(name)
   console.log(name.shift()) //to remove at front
+  // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+  // fruits[fruits.length] = "Kiwi"; //instead of push()
   console.log(name)
   console.log(name.unshift('abi')) //to insert at front
   console.log(name)

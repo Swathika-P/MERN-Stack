@@ -211,6 +211,12 @@ const {age,name:n,height=5.9} =obj
 console.log(height) //5.9 (default)
 console.log(n) //ram (n is alis of name)
 
+let{a:one,bb=25}={a:'one',bb:20}
+console.log(a); //ERROR ( 2 alis(:) for a )
+
+let{a1:onee,bbb=25}={a1:'onee',bbb:20}
+console.log(bbb); //20
+
 //foreach() in objects
 const objj = {
   name:'ram',
@@ -221,7 +227,7 @@ for(var key in objj){
   console.log(key+": "+objj[key]+1)
 } 
 /*
-  name: ram1
+  name: ram
   age: 221
   height: 51
 */
@@ -242,18 +248,18 @@ const op =[{
 },{
   name:'sam',
   age:20,
-  hieght:9
+  height:9
 }]
 //using index
 /*
 op[0].age+=2
 op[1].age+=2
 console.log(op[0]) //{ name: 'ram', age: 24, height: 5 }
-console.log(op[1]) //{ name: 'sam', age: 22, hieght: 9 }
+console.log(op[1]) //{ name: 'sam', age: 22, height: 9 }
 */
 //using map()
 const ans1 = op.map((user)=>{})
-console.log(ans1)  //console.log(ans)
+console.log(ans1)  //[ undefined, undefined ]
 const ans2 = op.map((user)=>({...user,age:user.age+2}))
 console.log(ans2)
 /*
@@ -265,7 +271,7 @@ console.log(ans2)
  const obb = {
    a:1,b:2,c:3,a:2
  } //duplicate not allowed new recent val get updated
- console.log(obb)
+ console.log(obb)  //{ a: 2, b: 2, c: 3 }
 
  for(var i=0;i<3;i++){
   setTimeout(()=>console.log(i),1)
@@ -295,7 +301,7 @@ const user=[{
   age:22
 }]
 const addUser =(obj)=>{
-  
+  user.push(obj)
 }
 const newUser ={
   name:'bar',
