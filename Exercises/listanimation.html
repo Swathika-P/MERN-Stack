@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent List with Child List</title>
+    <style>
+        .parent-list,.child2-list {
+            cursor: pointer;
+        }
+
+        .child-list,.grand-list{
+            display: none;
+            padding-left: 20px;
+        }
+
+        .parent-list.open .child-list,.child-list.open .grand-list{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="parent-list" onclick="toggleChildList(this)">Parent Item 1
+            <ul class="child-list">
+                <li class="child2-list" onclick="toggleChildList(this)">Child Item 1</li>
+                <ul class="grand-list">
+                    <li>Grand Child 1</li>
+                    <li>Grand Child 2</li>
+                    <li>Grand Child 3</li>
+                </ul>
+            </ul>
+        </li>
+        <li class="parent-list" onclick="toggleChildList(this)">Parent Item 2
+            <ul class="child-list">
+                <li>Child Item 2</li>
+            </ul>
+        </li>
+        <li class="parent-list" onclick="toggleChildList(this)">Parent Item 3
+            <ul class="child-list">
+                <li>Child Item 3</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script>
+        function toggleChildList(parent) {
+            parent.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>

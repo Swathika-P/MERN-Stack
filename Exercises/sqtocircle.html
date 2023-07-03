@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQUARE TO CIRCLE</title>
+</head>
+<body>
+    <div id="shape" class ="square"></div>
+    <style>
+        .square{
+            width:100px;
+            background-color:blue;
+            height:100px;
+        }
+        .circle{
+            border-radius: 50%;
+        }
+    </style>
+        <button onclick="changecircle()">Touch Me!</button>
+    <script>
+        function changecircle(){
+            var shape = document.getElementById("shape")
+            shape.classList.toggle("circle")
+        }
+    </script>
+</body>
+</html>
+
+<!-- The classList.toggle("circle") method is used to toggle the
+     presence of a CSS class named "circle" on an HTML element's classList.
+
+If the element already has the "circle" class,
+ the toggle() method will remove it, and if the element doesn't have the "circle" class, it will add it. 
+ Essentially, it toggles the class on and off.
+
+This is useful when you want to dynamically change the appearance or behavior of an element based on user interaction or certain conditions. 
+By toggling classes, you can control CSS styles or apply JavaScript logic accordingly. -->
